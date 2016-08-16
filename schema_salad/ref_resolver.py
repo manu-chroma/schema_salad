@@ -625,6 +625,8 @@ class Loader(object):
                 resp.raise_for_status()
             except Exception as e:
                 raise RuntimeError(url, e)
+            if "charset=" not in resp.headers["content-type"]:
+                resp.encoding = "utf-8"
             return resp.text
         elif scheme == 'file':
             try:
