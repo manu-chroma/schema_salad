@@ -8,6 +8,14 @@ os:
 
 install:
   - pip install tox-travis
-script: tox
+  - pip install codecov
+
+script:
+  - tox
+  - make .coverage
+
 notifications:
   email: false
+
+after_success:
+  - codecov
