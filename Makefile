@@ -107,30 +107,30 @@ diff_pylint_report: pylint_report.txt
 .coverage: $(PYSOURCES)
 	rm -f .coverage
 	$(COVBASE) setup.py test
-	$(COVBASE) -m schema_salad.main \
-		--print-jsonld-context schema_salad/metaschema/metaschema.yml \
-		> /dev/null
-	$(COVBASE) -m schema_salad.main \
-		--print-rdfs schema_salad/metaschema/metaschema.yml \
-		> /dev/null
-	$(COVBASE) -m schema_salad.main \
-		--print-avro schema_salad/metaschema/metaschema.yml \
-		> /dev/null
-	$(COVBASE) -m schema_salad.main \
-		--print-rdf schema_salad/metaschema/metaschema.yml \
-		> /dev/null
-	$(COVBASE) -m schema_salad.main \
-		--print-pre schema_salad/metaschema/metaschema.yml \
-		> /dev/null
-	$(COVBASE) -m schema_salad.main \
-		--print-index schema_salad/metaschema/metaschema.yml \
-		> /dev/null
-	$(COVBASE) -m schema_salad.main \
-		--print-metadata schema_salad/metaschema/metaschema.yml \
-		> /dev/null
-	$(COVBASE) -m schema_salad.makedoc \
-		schema_salad/metaschema/metaschema.yml \
-		> /dev/null
+	# $(COVBASE) -m schema_salad.main \
+	# 	--print-jsonld-context schema_salad/metaschema/metaschema.yml \
+	# 	> /dev/null
+	# $(COVBASE) -m schema_salad.main \
+	# 	--print-rdfs schema_salad/metaschema/metaschema.yml \
+	# 	> /dev/null
+	# $(COVBASE) -m schema_salad.main \
+	# 	--print-avro schema_salad/metaschema/metaschema.yml \
+	# 	> /dev/null
+	# $(COVBASE) -m schema_salad.main \
+	# 	--print-rdf schema_salad/metaschema/metaschema.yml \
+	# 	> /dev/null
+	# $(COVBASE) -m schema_salad.main \
+	# 	--print-pre schema_salad/metaschema/metaschema.yml \
+	# 	> /dev/null
+	# $(COVBASE) -m schema_salad.main \
+	# 	--print-index schema_salad/metaschema/metaschema.yml \
+	# 	> /dev/null
+	# $(COVBASE) -m schema_salad.main \
+	# 	--print-metadata schema_salad/metaschema/metaschema.yml \
+	# 	> /dev/null
+	# $(COVBASE) -m schema_salad.makedoc \
+	# 	schema_salad/metaschema/metaschema.yml \
+	# 	> /dev/null
 
 coverage.xml: .coverage
 	coverage xml

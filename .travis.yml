@@ -7,7 +7,14 @@ os:
   - linux
 
 install:
-  - pip install tox-travis
-script: tox
+  - pip install tox-travis coveralls
+
+script:
+  - tox
+
 notifications:
   email: false
+
+after_success:
+  - codecov
+  - coveralls
